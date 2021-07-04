@@ -15,7 +15,8 @@ Additional info and related constraints :
 
 ```
 We can solve this problem by breaking it in smaller problems/sets.
-Where we can pick each set and see if it can be added in the package (Sets whose total wight is less than that of package itself).
+Where we can pick each set and see if it can be added in the package 
+(Sets whose total wight is less than that of package itself).
 and calculate the cost.
 
 With each subset there are two options
