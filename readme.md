@@ -30,7 +30,7 @@ thereafter from all such set we can pick the set which provides the maximum cost
 
 ## ✍️ Technical Implementation /Design Patterns<a name = "demo"></a>
 
-From implementation perspective we can break down the solution is small steps as follows  :-
+From implementation perspective I had broken down the solution is small steps as follows  :-
 
 1. Read the file data and process it
     1. Process the data such that all the items associated to a package weight is mapped in a map
@@ -39,7 +39,7 @@ From implementation perspective we can break down the solution is small steps as
 2. Process the sorted Map to get the result of most valued item in package
 3. Finally, get the Comma separated Items index number which are put in package.
 
-**For this challenge we will use the "Template Method pattern"**
+**For this challenge I had used the "Template Method pattern"**
 
 The Template Method pattern suggests that you break down an algorithm into a series of steps,
 <br> turn these steps into methods, and put a series of calls to these methods inside a single
@@ -60,7 +60,7 @@ itself.
 ![img_1.png](img_1.png)
 
 **Data Structures**
-<br>We have used LinkedHashMap<String,List<Item>
+<br>We have used LinkedHashMap<String,List>
 
 1. With Key of type string representing the max weight of package and
 2. Value as List of Items that we are associated to that weight of package
@@ -82,8 +82,8 @@ Key | Value
 
 3. The Challenge has a constraint of _**prefer to send a package which weighs less in case there is
    more than one package with the same price**_
-   <br>Thus we are using Override compareTo method in Item object and sort the Item List using the
-   constraints.
+   <br>Thus I had overridden compareTo method in Item object and sort the Item List using the
+   asked constraints.
 
 ## 📝️ Note
 
@@ -97,8 +97,7 @@ Since the library is implemented using the Template method behavioral pattern
 <br>we can also write a new Concrete class and override the process method and
 <br>implement it with the caching mechanism as explained above.
 
-Due to time constraint I did not implement it.
-<br>Though I suppose it gives an idea of how useful Template Pattern can be with such use cases
+<br>I suppose it gives an idea of how useful Template Method Pattern can be with such use cases
 where the client have freedom of overriding how to process the given problem with different
 constraints as applicable or changing how to see the result etc.
 <br>and the creator of library have control on the order/sequence of steps that need to be followed
